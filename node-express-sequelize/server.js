@@ -9,9 +9,9 @@ var User = sequelize.define('User', {
 
 app.get('/users', function (req, res) {
   User.findAll().then(users => {
-    
+    res.send(users);
   })
-  res.send()
+
 });
 /*  Create a '/users' route that responds to 
     a GET request with all users in the database */
