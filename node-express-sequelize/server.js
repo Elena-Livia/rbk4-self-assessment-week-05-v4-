@@ -7,6 +7,12 @@ var User = sequelize.define('User', {
   username: Sequelize.STRING
 });
 
+app.get('/users', function (req, res) {
+  User.findAll().then(users => {
+    
+  })
+  res.send()
+});
 /*  Create a '/users' route that responds to 
     a GET request with all users in the database */
 
